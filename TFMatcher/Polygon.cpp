@@ -5,6 +5,7 @@ Polygon::Polygon()
 {
 
 }
+
 Polygon::Polygon(vector<Vector2> _vertices)
 {
 	vertices = _vertices;
@@ -21,6 +22,7 @@ void Polygon::AddVertex(Vector2 _vertex)
 	Vector2 lastVertex;
 
 	vertices.push_back(_vertex);
+	vertexCount++;
 
 	if (vertices.size() == 1)
 		return;
@@ -29,6 +31,7 @@ void Polygon::AddVertex(Vector2 _vertex)
 
 	Vector2 edge = Vector2(_vertex.GetElement1() - lastVertex.GetElement1(), _vertex.GetElement2() - lastVertex.GetElement2());
 	AddEdge(edge);
+	edgeCount++;
 }
 
 void Polygon::AddEdge(Vector2 _edge)
@@ -54,6 +57,11 @@ double Polygon::GetPerimeter() const
 	return perimeter;
 }
 
+Vector2 Polygon::GetVertex(unsigned int index) const
+{
+	return vertices[index];
+}
+
 vector<Vector2> Polygon::GetVertices() const
 {
 	return vertices;
@@ -62,4 +70,14 @@ vector<Vector2> Polygon::GetVertices() const
 vector<Vector2> Polygon::GetEdges() const
 {
 	return edges;
+}
+
+int Polygon::GetEdgeCount() const
+{
+	return edgeCount;
+}
+
+int Polygon::GetVertexCount() const
+{
+	return vertexCount;
 }
