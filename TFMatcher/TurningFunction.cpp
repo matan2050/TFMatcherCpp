@@ -1,4 +1,7 @@
+#include <assert.h>
 #include "TurningFunction.h"
+
+// #define NDEBUG
 
 TurningFunction::TurningFunction()
 {
@@ -57,7 +60,7 @@ vector<double> TurningFunction::CalculateImage(Polygon _poly)
 		double magA = edgeB.Magnitude();
 		double magB = edgeB.Magnitude();
 
-		_ASSERT((magA != 0) && (magB != 0));
+		assert((magA != 0) && (magB != 0));
 
 		angle /= magA*magB;
 		angle = acos(angle);
@@ -66,6 +69,59 @@ vector<double> TurningFunction::CalculateImage(Polygon _poly)
 		tempImage.push_back(angleAccumulator);
 	}
 	return tempImage;
+}
+
+vector<double> TurningFunction::GetRange()
+{
+	return range;
+}
+
+vector<double> TurningFunction::GetImage()
+{
+	return image;
+}
+
+double TurningFunction::ValueAt(float _x)
+{
+	int polygonLength = range.size();
+	int mid = polygonLength / 2;
+
+	while ((mid >= 0) || (mid < polygonLength))
+	{
+		// range[mid] == _x
+		if (abs(range[mid] - _x) < EPSILON)
+		{
+			return image[mid];
+		}
+
+		if (range[mid] < _x)
+		{
+			if (range[mid + 1] < polygonLength)
+			{
+				if ((range[mid + 1]) > _x)
+					return image[mid];
+			}
+
+			mid += mid / 2;
+		}
+
+		if (range[mid] > _x)
+		{
+			if (range[mid - 1] >= 0)
+			{
+				if (range[mid - 1] < _x)
+					return image[mid - 1];
+			}
+
+			mid /= 2;
+		}
+	}
+
+}
+
+double Distance(TurningFunction _other)
+{
+	return 0;
 }
 
 string TurningFunction::ToString() const
