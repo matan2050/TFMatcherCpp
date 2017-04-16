@@ -21,11 +21,11 @@ public:
 	vector<double> CalculateNormalizedRange(Polygon);
 	vector<double> CalculateImage(Polygon);
 
-	double ValueAt(float);
+	double ValueAt(float) const;
 
 	// GETTERS
-	vector<double> GetRange();
-	vector<double> GetImage();
+	vector<double> GetRange() const;
+	vector<double> GetImage() const;
 
 	// HELPER FUNCTIONS
 	string ToString() const;

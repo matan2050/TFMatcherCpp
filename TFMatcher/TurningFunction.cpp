@@ -77,17 +77,17 @@ vector<double> TurningFunction::CalculateImage(Polygon _poly)
 	return tempImage;
 }
 
-vector<double> TurningFunction::GetRange()
+vector<double> TurningFunction::GetRange() const
 {
 	return range;
 }
 
-vector<double> TurningFunction::GetImage()
+vector<double> TurningFunction::GetImage() const
 {
 	return image;
 }
 
-double TurningFunction::ValueAt(float _x)
+double TurningFunction::ValueAt(float _x) const
 {
 	int polygonLength = range.size();
 	int mid = polygonLength / 2;
