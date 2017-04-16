@@ -2,6 +2,7 @@
 #include <vector>
 #include "Polygon.h"
 #include "TurningFunction.h"
+#include "AlignedTF.h"
 
 class Matcher
 {

@@ -3,7 +3,7 @@
 Matcher::Matcher(Polygon _polyA, Polygon _polyB)
 {
 	turningFunctionA = TurningFunction(_polyA);
-
+	reshapedTurningFunctionB = GenerateReshapedFunction(_polyB);
 }
 
 Polygon Matcher::GenerateReshapedPolygon(Polygon _poly, int startIndex, int endIndex, int numVertices)
@@ -15,7 +15,7 @@ Polygon Matcher::GenerateReshapedPolygon(Polygon _poly, int startIndex, int endI
 		reshapedPoly.AddVertex(_poly.GetVertex(vertex));
 	}
 
-	for (int vertex = 0; vertex < endIndex; vertex++)
+	for (int vertex = 0; vertex <= endIndex; vertex++)
 	{
 		reshapedPoly.AddVertex(_poly.GetVertex(vertex));
 	}
@@ -40,4 +40,22 @@ vector<TurningFunction> Matcher::GenerateReshapedFunction(Polygon _poly)
 	}
 
 	return reshapedFunc;
+}
+
+double Matcher::Distance()
+{
+	double minDistance = INT32_MAX;
+
+	for (int i = 0; i < reshapedTurningFunctionB.size(); i++)
+	{
+		AlignedTF matchedPair = AlignedTF(turningFunctionA, reshapedTurningFunctionB[i]);
+		double distance = matchedPair.Distance();
+
+		if (distance < minDistance)
+		{
+			minDistance = distance;
+		}
+	}
+
+	return minDistance;
 }
