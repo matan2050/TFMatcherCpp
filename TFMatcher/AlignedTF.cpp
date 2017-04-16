@@ -28,6 +28,7 @@ AlignedTF::AlignedTF(TurningFunction _tfA, TurningFunction _tfB) : turningFuncti
 			if (iterA != rangeA.end())
 			{
 				iterA++;
+				continue;
 			}
 			
 		}
@@ -40,6 +41,7 @@ AlignedTF::AlignedTF(TurningFunction _tfA, TurningFunction _tfB) : turningFuncti
 			if (iterB != rangeB.end())
 			{
 				iterB++;
+				continue;
 			}
 		}
 
@@ -49,6 +51,7 @@ AlignedTF::AlignedTF(TurningFunction _tfA, TurningFunction _tfB) : turningFuncti
 			sharedRangeEvents.push_back(*iterA);
 			iterA++;
 			iterB++;
+			continue;
 		}
 	}
 
