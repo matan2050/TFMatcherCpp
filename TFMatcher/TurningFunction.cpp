@@ -14,6 +14,12 @@ TurningFunction::TurningFunction(Polygon _poly) : TurningFunction()
 	image = CalculateImage(_poly);
 }
 
+TurningFunction::TurningFunction(TurningFunction& other)
+{
+	image = other.GetImage();
+	range = other.GetRange();
+}
+
 vector<double> TurningFunction::CalculateNormalizedRange(Polygon _poly)
 {
 	vector<double> tempRange;
@@ -117,11 +123,6 @@ double TurningFunction::ValueAt(float _x)
 		}
 	}
 
-}
-
-double Distance(TurningFunction _other)
-{
-	return 0;
 }
 
 string TurningFunction::ToString() const

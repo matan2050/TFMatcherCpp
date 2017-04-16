@@ -15,13 +15,13 @@ public:
 	// CONSTRUCTORS
 	TurningFunction::TurningFunction();
 	TurningFunction(Polygon);
+	TurningFunction(TurningFunction&);
 	
 	// FUNCTION RANGE AND IMAGE GENERATORS
 	vector<double> CalculateNormalizedRange(Polygon);
 	vector<double> CalculateImage(Polygon);
 
 	double ValueAt(float);
-	double Distance(TurningFunction);
 
 	// GETTERS
 	vector<double> GetRange();
