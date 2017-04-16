@@ -76,8 +76,9 @@ double AlignedTF::Distance()
 
 		nextX = sharedRangeEvents[i + 1];
 
-		distance += (nextX - currentX)*(abs(valueB - valueA));
+		distance += (nextX - currentX)*(valueB - valueA)*(valueB - valueA);
 	}
 
+	distance = sqrt(distance);
 	return distance;
 }
