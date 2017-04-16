@@ -8,11 +8,6 @@ Vector2::Vector2(double _element1, double _element2) : element1(_element1), elem
 {
 }
 
-/*Vector2 Vector2::operator=(const Vector2& _other)
-{
-	return Vector2(_other.GetElement1(), _other.GetElement2());
-}*/
-
 double Vector2::GetElement1() const
 {
 	return element1;
