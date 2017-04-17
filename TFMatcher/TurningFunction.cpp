@@ -34,7 +34,7 @@ vector<double> TurningFunction::CalculateNormalizedRange(Polygon _poly)
 		double segmentPerimeter = iter->Magnitude();
 		double currentSegment = segmentPerimeter / polygonPerimeter;
 		
-		perimeterAccumulator += currentSegment;
+		perimeterAccumulator += currentSegment * RANGE_MAX;	// scale range according to RANGE_MAX
 
 		tempRange.push_back(perimeterAccumulator);
 	}
@@ -89,8 +89,13 @@ vector<double> TurningFunction::GetImage() const
 
 double TurningFunction::ValueAt(float _x) const
 {
-	int polygonLength = range.size();
-	int mid = polygonLength / 2;
+	if ((_x < RANGE_MIN) || (_x > RANGE_MAX))
+	{
+		return NULL;
+	}
+
+	size_t polygonLength = range.size();
+	size_t mid = polygonLength / 2;
 
 	while ((mid >= 0) || (mid < polygonLength))
 	{

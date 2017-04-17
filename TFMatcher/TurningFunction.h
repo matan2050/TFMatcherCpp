@@ -4,6 +4,9 @@
 #include "Polygon.h"
 #include "SharedDefinitions.h"
 
+#define RANGE_MIN 0
+#define RANGE_MAX 1
+
 class TurningFunction
 {
 private:
