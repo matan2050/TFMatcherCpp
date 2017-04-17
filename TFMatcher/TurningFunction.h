@@ -3,6 +3,7 @@
 #include <math.h>
 #include "Polygon.h"
 #include "SharedDefinitions.h"
+#include "StringUtils.h"
 
 #define RANGE_MIN 0
 #define RANGE_MAX 1
@@ -32,5 +33,4 @@ public:
 
 	// HELPER FUNCTIONS
 	string ToString() const;
-	string OutputMatlabVector(string, const vector<double>&) const;
 };

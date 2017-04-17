@@ -132,25 +132,8 @@ double TurningFunction::ValueAt(float _x) const
 
 string TurningFunction::ToString() const
 {
-	string rangeString = OutputMatlabVector("range", range);
-	string imageString = OutputMatlabVector("image", image);
+	string rangeString = StringUtils::OutputMatlabVector("range", range);
+	string imageString = StringUtils::OutputMatlabVector("image", image);
 
 	return rangeString + imageString;
-}
-
-//TODO: move function to a shared library
-string TurningFunction::OutputMatlabVector(string _vectorName, const vector<double>& _vec) const
-{
-	ostringstream ss;
-
-	ss << _vectorName << " = [";
-	for (vector<double>::const_iterator iter = _vec.begin(); iter != _vec.end(); iter++)
-	{
-		if (iter + 1 != _vec.end())
-			ss << *iter << ", ";
-		else
-			ss << *iter << "]" << endl;
-	}
-
-	return ss.str();
 }
