@@ -63,7 +63,7 @@ vector<double> TurningFunction::CalculateImage(Polygon _poly)
 
 		angle = edgeA.Dot(edgeB);
 			
-		double magA = edgeB.Magnitude();
+		double magA = edgeA.Magnitude();
 		double magB = edgeB.Magnitude();
 
 		assert((magA != 0) && (magB != 0));
