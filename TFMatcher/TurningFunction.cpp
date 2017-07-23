@@ -71,7 +71,7 @@ vector<double> TurningFunction::CalculateImage(Polygon _poly)
 		angle /= magA*magB;
 		angle = acos(angle);
 
-		angleAccumulator += angle;
+		angleAccumulator += edgeA.CrossDirection(edgeB) * angle;
 		tempImage.push_back(angleAccumulator);
 	}
 	return tempImage;

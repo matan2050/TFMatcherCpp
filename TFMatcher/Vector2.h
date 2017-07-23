@@ -22,6 +22,8 @@ public:
 	double GetElement2() const;
 
 	double Dot(Vector2) const;
+	double CrossDirection(Vector2) const;
+
 	double Magnitude() const;
 	string ToString() const;
 };

@@ -23,6 +23,20 @@ double Vector2::Dot(Vector2 _otherVec) const
 	return element1*_otherVec.element1 + element2*_otherVec.element2;
 }
 
+double Vector2::CrossDirection(Vector2 _vec2) const
+{
+	double zCross = GetElement1() * _vec2.GetElement2() - GetElement2() *_vec2.GetElement1();
+
+	if (zCross > 0)
+	{
+		return 1.0;
+	}
+	else
+	{
+		return -1.0;
+	}
+}
+
 double Vector2::Magnitude() const
 {
 	return sqrt(element1*element1 + element2*element2);
