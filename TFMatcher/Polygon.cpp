@@ -1,10 +1,7 @@
 #include "Polygon.h"
 
 // ctor & dtor
-Polygon::Polygon()
-{
-
-}
+Polygon::Polygon() {}
 
 Polygon::Polygon(vector<Vector2> _vertices)
 {

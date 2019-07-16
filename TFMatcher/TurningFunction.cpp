@@ -3,10 +3,7 @@
 
 // #define NDEBUG
 
-TurningFunction::TurningFunction()
-{
-
-}
+TurningFunction::TurningFunction() {}
 
 TurningFunction::TurningFunction(Polygon _poly) : TurningFunction()
 {

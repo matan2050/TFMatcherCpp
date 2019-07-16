@@ -1,22 +1,12 @@
 #include "Vector2.h"
 
-Vector2::Vector2() : element1(0), element2(0)
-{
-}
+// constructors
+Vector2::Vector2() : element1(0), element2(0) {}
+Vector2::Vector2(double _element1, double _element2) : element1(_element1), element2(_element2) {}
 
-Vector2::Vector2(double _element1, double _element2) : element1(_element1), element2(_element2)
-{
-}
-
-double Vector2::GetElement1() const
-{
-	return element1;
-}
-
-double Vector2::GetElement2() const
-{
-	return element2;
-}
+// getters
+double Vector2::GetElement1() const { return element1; }
+double Vector2::GetElement2() const { return element2; }
 
 double Vector2::Dot(Vector2 _otherVec) const
 {
@@ -27,14 +17,8 @@ double Vector2::CrossDirection(Vector2 _vec2) const
 {
 	double zCross = GetElement1() * _vec2.GetElement2() - GetElement2() *_vec2.GetElement1();
 
-	if (zCross > 0)
-	{
-		return 1.0;
-	}
-	else
-	{
-		return -1.0;
-	}
+	if (zCross > 0) { return 1.0; }
+	else { return -1.0; }
 }
 
 double Vector2::Magnitude() const
