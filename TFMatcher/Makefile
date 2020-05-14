@@ -4,13 +4,13 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -Iinclude -std=c++11 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = myapp
+APPNAME = TFMatcher
 EXT = .cpp
-SRCDIR = /home/matan/Repos/TFMatcherCpp/TFMatcher
+SRCDIR = src
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
