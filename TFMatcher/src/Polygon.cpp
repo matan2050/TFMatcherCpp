@@ -1,4 +1,4 @@
-#include "Polygon.h"
+#include "../include/Polygon.h"
 
 // ctor & dtor
 Polygon::Polygon() {}

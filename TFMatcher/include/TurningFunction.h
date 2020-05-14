@@ -6,8 +6,8 @@
 #include "SharedDefinitions.h"
 #include "StringUtils.h"
 
-#define RANGE_MIN 0
-#define RANGE_MAX 1
+constexpr double RANGE_MIN = 0;
+constexpr double RANGE_MAX = 1;
 
 class TurningFunction
 {

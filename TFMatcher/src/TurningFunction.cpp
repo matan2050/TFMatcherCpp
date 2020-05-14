@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "TurningFunction.h"
+#include "../include/TurningFunction.h"
 
 // #define NDEBUG
 
@@ -88,7 +88,7 @@ double TurningFunction::ValueAt(float _x) const
 {
 	if ((_x < RANGE_MIN) || (_x > RANGE_MAX))
 	{
-		return NULL;
+		throw new std::invalid_argument("invalid range value");
 	}
 
 	size_t polygonLength = range.size();
@@ -96,7 +96,6 @@ double TurningFunction::ValueAt(float _x) const
 
 	while ((mid >= 0) || (mid < polygonLength))
 	{
-		// range[mid] == _x
 		if (abs(range[mid] - _x) < EPSILON)
 		{
 			return image[mid];

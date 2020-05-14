@@ -1,4 +1,4 @@
-#include "StringUtils.h"
+#include "../include/StringUtils.h"
 
 string StringUtils::OutputMatlabVector(string _vectorName, const vector<double>& _vec)
 {

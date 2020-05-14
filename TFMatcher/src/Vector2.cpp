@@ -1,4 +1,4 @@
-#include "Vector2.h"
+#include "../include/Vector2.h"
 
 // constructors
 Vector2::Vector2() : element1(0), element2(0) {}

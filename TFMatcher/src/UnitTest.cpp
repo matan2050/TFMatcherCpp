@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Vector2.h"
-#include "Polygon.h"
-#include "TurningFunction.h"
-#include "Matcher.h"
-#include "AlignedTF.h"
+#include "../include/Vector2.h"
+#include "../include/Polygon.h"
+#include "../include/TurningFunction.h"
+#include "../include/Matcher.h"
+#include "../include/AlignedTF.h"
 
 using namespace std;
 
