@@ -7,3 +7,13 @@
 ########
 *.log
 *.tlog
+
+# os generated files #
+######################
+*.db
+
+# visual studio files #
+#######################
+*.lastbuildstate
+*.ipch
+*.idb
