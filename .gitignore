@@ -1,13 +1,9 @@
-*.opendb
-*.db
-TFMatcher/Debug/
-TFMatcher/x64/Debug/vc141.idb
-TFMatcher/x64/Debug/TFMatcher.tlog/link.write.1.tlog
-TFMatcher/x64/Debug/TFMatcher.tlog/link.read.1.tlog
-TFMatcher/x64/Debug/TFMatcher.tlog/CL.read.1.tlog
-TFMatcher/x64/Debug/TFMatcher.tlog/CL.command.1.tlog
-.vs/TFMatcher/v15/ipch/AutoPCH/df080a89716e977a/UNITTEST.ipch
-TFMatcher/x64/Debug/TFMatcher.tlog/link.command.1.tlog
-TFMatcher/x64/Debug/TFMatcher.tlog/TFMatcher.lastbuildstate
-TFMatcher/x64/Debug/TFMatcher.tlog/CL.write.1.tlog
-.vs/TFMatcher/v15/ipch/AutoPCH/44d134222ca2bf4d/TURNINGFUNCTION.ipch
+# compiled source #
+###################
+*.o
+*.d
+
+# logs #
+########
+*.log
+*.tlog
