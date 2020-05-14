@@ -1,3 +1,6 @@
-#pragma once
+#ifndef _SHARED_DEFINITIONS_H_
+#define _SHARED_DEFINITIONS_H_
 
-# define EPSILON 0.0000000001
+#define EPSILON 0.0000000001
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _MATCHER_H_
+#define _MATCHER_H_
+
 #include <vector>
 #include "Polygon.h"
 #include "TurningFunction.h"
@@ -7,7 +9,7 @@
 class Matcher
 {
 private:
-	double distance = NULL;
+	double distance = 0.0f;
 	TurningFunction turningFunctionA;
 	vector<TurningFunction> reshapedTurningFunctionB;
 
@@ -17,3 +19,5 @@ public:
 	Polygon GenerateReshapedPolygon(Polygon, int, int, int);
 	double Distance();
 };
+
+#endif

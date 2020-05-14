@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _POLYGON_H_
+#define _POLYGON_H_
 
 #include <vector>
 #include <sstream>
@@ -37,3 +38,5 @@ public:
 	// HELPER FUNCTIONS
 	string ToString() const;
 };
+
+#endif

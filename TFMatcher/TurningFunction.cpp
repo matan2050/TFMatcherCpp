@@ -11,7 +11,7 @@ TurningFunction::TurningFunction(Polygon _poly) : TurningFunction()
 	image = CalculateImage(_poly);
 }
 
-TurningFunction::TurningFunction(TurningFunction& other)
+TurningFunction::TurningFunction(const TurningFunction& other)
 {
 	image = other.GetImage();
 	range = other.GetRange();

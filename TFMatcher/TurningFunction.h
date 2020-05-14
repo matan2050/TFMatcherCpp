@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _TURNING_FUNCTION_H_
+#define _TURNING_FUNCTION_H_
 #include <vector>
 #include <math.h>
 #include "Polygon.h"
@@ -11,26 +12,28 @@
 class TurningFunction
 {
 private:
-	vector<double> range;
-	vector<double> image;
+	std::vector<double> range;
+	std::vector<double> image;
 
 public:
 
 	// CONSTRUCTORS
-	TurningFunction::TurningFunction();
+	TurningFunction();
 	TurningFunction(Polygon);
-	TurningFunction(TurningFunction&);
+	TurningFunction(const TurningFunction&);
 	
 	// FUNCTION RANGE AND IMAGE GENERATORS
-	vector<double> CalculateNormalizedRange(Polygon);
-	vector<double> CalculateImage(Polygon);
+	std::vector<double> CalculateNormalizedRange(Polygon);
+	std::vector<double> CalculateImage(Polygon);
 
 	double ValueAt(float) const;
 
 	// GETTERS
-	vector<double> GetRange() const;
-	vector<double> GetImage() const;
+	std::vector<double> GetRange() const;
+	std::vector<double> GetImage() const;
 
 	// HELPER FUNCTIONS
 	string ToString() const;
 };
+
+#endif

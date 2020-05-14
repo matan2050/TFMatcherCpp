@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _ALIGNED_TF_H
+#define _ALIGNED_TF_H
+
 #include <vector>
 
 #include "SharedDefinitions.h"
@@ -18,3 +20,5 @@ public:
 
 	double Distance();
 };
+
+#endif

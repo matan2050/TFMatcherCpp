@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _VECTOR2_H_
+#define _VECTOR2_H_
 
 #include <math.h>
 #include <string>
@@ -27,3 +28,5 @@ public:
 	double Magnitude() const;
 	string ToString() const;
 };
+
+#endif

@@ -18,8 +18,6 @@ int main()
 	Vector2* vecPtr;
 	vecPtr = &vec;
 
-	Vector2 newVec = *vecPtr;
-
 	auto poly = Polygon();
 	poly.AddVertex(Vector2(0, 0));
 	poly.AddVertex(Vector2(0, 1));
@@ -45,6 +43,8 @@ int main()
 	double val2 = tf.ValueAt(0.26);
 	double val3 = tf.ValueAt(1);
 	double val4 = tf.ValueAt(0.99);
+
+	std::cout<<val1<<","<<val2<<","<<val3<<","<<val4<<"\n";
 
 	Matcher match = Matcher(poly, poly);
 	match.GenerateReshapedFunction(poly);
