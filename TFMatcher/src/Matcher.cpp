@@ -46,7 +46,7 @@ double Matcher::Distance()
 {
 	double minDistance = INT32_MAX;
 
-	for (int i = 0; i < reshapedTurningFunctionB.size(); i++)
+	for (size_t i = 0; i < reshapedTurningFunctionB.size(); i++)
 	{
 		AlignedTF matchedPair = AlignedTF(turningFunctionA, reshapedTurningFunctionB[i]);
 		double distance = matchedPair.Distance();
