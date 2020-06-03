@@ -3,7 +3,7 @@
 // ctor & dtor
 Polygon::Polygon() {}
 
-Polygon::Polygon(vector<Vector2> _vertices)
+Polygon::Polygon(const vector<Vector2>& _vertices)
 {
 	vertices = _vertices;
 	

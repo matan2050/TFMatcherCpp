@@ -1,10 +1,7 @@
 #include "../include/AlignedTF.h"
 
-/*AlignedTF::AlignedTF()
-{
-}*/
-
-AlignedTF::AlignedTF(TurningFunction _tfA, TurningFunction _tfB) : turningFunctionA(_tfA), turningFunctionB(_tfB)
+AlignedTF::AlignedTF(TurningFunction _tfA, TurningFunction _tfB) : 
+	turningFunctionA(_tfA), turningFunctionB(_tfB)
 {
 	vector<double> rangeA = _tfA.GetRange();
 	vector<double> rangeB = _tfB.GetRange();

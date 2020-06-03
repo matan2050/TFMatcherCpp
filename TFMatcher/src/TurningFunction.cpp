@@ -5,7 +5,7 @@
 
 TurningFunction::TurningFunction() {}
 
-TurningFunction::TurningFunction(Polygon _poly) : TurningFunction()
+TurningFunction::TurningFunction(const Polygon& _poly) : TurningFunction()
 {
 	range = CalculateNormalizedRange(_poly);
 	image = CalculateImage(_poly);
@@ -17,7 +17,7 @@ TurningFunction::TurningFunction(const TurningFunction& other)
 	range = other.GetRange();
 }
 
-vector<double> TurningFunction::CalculateNormalizedRange(Polygon _poly)
+vector<double> TurningFunction::CalculateNormalizedRange(const Polygon& _poly)
 {
 	vector<double> tempRange;
 	tempRange.push_back(0);
@@ -39,7 +39,7 @@ vector<double> TurningFunction::CalculateNormalizedRange(Polygon _poly)
 	return tempRange;
 }
 
-vector<double> TurningFunction::CalculateImage(Polygon _poly)
+vector<double> TurningFunction::CalculateImage(const Polygon& _poly)
 {
 	vector<double> tempImage;
 	vector<Vector2> edges = _poly.GetEdges();

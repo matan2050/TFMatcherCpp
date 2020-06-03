@@ -19,12 +19,12 @@ public:
 
 	// CONSTRUCTORS
 	TurningFunction();
-	TurningFunction(Polygon);
+	TurningFunction(const Polygon&);
 	TurningFunction(const TurningFunction&);
 	
 	// FUNCTION RANGE AND IMAGE GENERATORS
-	std::vector<double> CalculateNormalizedRange(Polygon);
-	std::vector<double> CalculateImage(Polygon);
+	std::vector<double> CalculateNormalizedRange(const Polygon&);
+	std::vector<double> CalculateImage(const Polygon&);
 
 	double ValueAt(float) const;
 
