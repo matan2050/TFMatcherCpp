@@ -1,12 +1,15 @@
 #include "../include/Matcher.h"
 
-Matcher::Matcher(Polygon _polyA, Polygon _polyB)
+Matcher::Matcher(const Polygon& _polyA, const Polygon& _polyB)
 {
 	turningFunctionA = TurningFunction(_polyA);
 	reshapedTurningFunctionB = GenerateReshapedFunction(_polyB);
 }
 
-Polygon Matcher::GenerateReshapedPolygon(Polygon _poly, int startIndex, int endIndex, int numVertices)
+Polygon Matcher::GenerateReshapedPolygon(const Polygon& _poly, 
+	int startIndex, 
+	int endIndex, 
+	int numVertices)
 {
 	Polygon reshapedPoly = Polygon();
 
@@ -23,7 +26,7 @@ Polygon Matcher::GenerateReshapedPolygon(Polygon _poly, int startIndex, int endI
 	return reshapedPoly;
 }
 
-vector<TurningFunction> Matcher::GenerateReshapedFunction(Polygon _poly)
+vector<TurningFunction> Matcher::GenerateReshapedFunction(const Polygon& _poly)
 {
 	int numReshapedFuncs = _poly.GetEdgeCount();
 	vector<TurningFunction> reshapedFunc(numReshapedFuncs);
