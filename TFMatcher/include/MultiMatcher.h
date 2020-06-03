@@ -9,6 +9,7 @@ class MultiMatcher
 {
     private:
     vector<Matcher> multiMatcherCollection;
+    Polygon referencePolygon;
     int polygonCounter = 0;
 
     public:
