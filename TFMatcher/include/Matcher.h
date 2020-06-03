@@ -14,9 +14,9 @@ private:
 	vector<TurningFunction> reshapedTurningFunctionB;
 
 public:
-	Matcher(Polygon, Polygon);
-	vector<TurningFunction> GenerateReshapedFunction(Polygon);
-	Polygon GenerateReshapedPolygon(Polygon, int, int, int);
+	Matcher(const Polygon&, const Polygon&);
+	vector<TurningFunction> GenerateReshapedFunction(const Polygon&);
+	Polygon GenerateReshapedPolygon(const Polygon&, int, int, int);
 	double Distance();
 };
 

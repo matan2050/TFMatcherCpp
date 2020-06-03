@@ -15,8 +15,8 @@ int main()
 	Vector2 otherVector(10, 2);
 	cout << vec.Dot(otherVector) << endl;
 
-	Vector2* vecPtr;
-	vecPtr = &vec;
+	//Vector2* vecPtr;
+	//vecPtr = &vec;
 
 	auto poly = Polygon();
 	poly.AddVertex(Vector2(0, 0));
