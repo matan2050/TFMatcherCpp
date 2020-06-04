@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir build && cd TFMatcher
+      run: cd TFMatcher
     - name: make
       run: make
     - name: make check
