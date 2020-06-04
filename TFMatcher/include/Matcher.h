@@ -17,7 +17,7 @@ public:
 	Matcher(const Polygon&, const Polygon&);
 	vector<TurningFunction> GenerateReshapedFunction(const Polygon&);
 	Polygon GenerateReshapedPolygon(const Polygon&, int, int, int);
-	double Distance();
+	double Distance() const;
 };
 
 #endif

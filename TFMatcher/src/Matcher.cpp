@@ -45,7 +45,7 @@ vector<TurningFunction> Matcher::GenerateReshapedFunction(const Polygon& _poly)
 	return reshapedFunc;
 }
 
-double Matcher::Distance()
+double Matcher::Distance() const
 {
 	double minDistance = INT32_MAX;
 
