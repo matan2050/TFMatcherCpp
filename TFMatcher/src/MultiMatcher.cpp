@@ -1,5 +1,10 @@
 #include "../include/MultiMatcher.h"
 
+void MultiMatcher::SetReference(const Polygon& reference)
+{
+    referencePolygon = reference;
+}
+
 void MultiMatcher::AddPolygon(const Polygon& polygon)
 {
     multiMatcherCollection.push_back(Matcher(referencePolygon, polygon));

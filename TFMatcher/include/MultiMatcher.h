@@ -14,6 +14,7 @@ class MultiMatcher
 
     public:
     MultiMatcher() {}
+    void SetReference(const Polygon& reference);
     void AddPolygon(const Polygon& polygon);
     void PopPolygon();
     std::vector<double> Process() const;

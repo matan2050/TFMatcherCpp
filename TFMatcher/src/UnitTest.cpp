@@ -1,8 +1,10 @@
 #include <iostream>
+#include <memory>
 #include "../include/Vector2.h"
 #include "../include/Polygon.h"
 #include "../include/TurningFunction.h"
 #include "../include/Matcher.h"
+#include "../include/MultiMatcher.h"
 #include "../include/AlignedTF.h"
 
 using namespace std;
@@ -71,6 +73,24 @@ int main()
 
 	auto tfC = TurningFunction(polyC);
 	cout << tfC.ToString();
+
+	MultiMatcher mm;
+	mm.SetReference(poly);
+	mm.AddPolygon(otherPoly);
+	mm.AddPolygon(polyC);
+	mm.AddPolygon(polyB);
+
+	auto results = mm.Process();
+	int resCounter = 0;
+	std::cout << "Similarities: " << std::endl;
+	for (vector<double>::const_iterator iter = results.begin();
+		iter != results.end();
+		iter++
+		)
+	{
+		std::cout << std::to_string(resCounter) << ": " << std::to_string(*iter) << std::endl;
+	}
+
 	std::system("pause");
 	return 0;
 }
