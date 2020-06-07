@@ -8,10 +8,10 @@ CXXFLAGS = -Iinclude -std=c++11 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = TFMatcher
+APPNAME = TFMatcherUnitTest
 EXT = .cpp
-SRCDIR = src
-OBJDIR = obj
+SRCDIR = TFMatcher/src
+OBJDIR = TFMatcher/obj
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
