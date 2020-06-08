@@ -25,6 +25,7 @@ std::vector<double> MultiMatcher::Process() const
         matchIter++)
         {
              results[counter] = matchIter->Distance();
+             counter++;
         }
 
     return results;
