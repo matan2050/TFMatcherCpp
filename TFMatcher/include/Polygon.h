@@ -22,6 +22,7 @@ public:
 	// CONSTRUCTORS
 	Polygon();
 	Polygon(const vector<Vector2>&);
+	Polygon(const Polygon&);
 	
 	// VERTEX AND EDGE ADDING FUNCTIONS
 	void AddVertex(Vector2);

@@ -74,11 +74,16 @@ int main()
 	auto tfC = TurningFunction(polyC);
 	cout << tfC.ToString();
 
-	MultiMatcher mm;
+	MultiMatcherParallel mm;
 	mm.SetReference(poly);
 	mm.AddPolygon(otherPoly);
 	mm.AddPolygon(polyC);
 	mm.AddPolygon(polyB);
+
+	for (int i(0); i < 1e5; i++)
+	{
+		mm.AddPolygon(Polygon(polyC));
+	}
 
 	auto results = mm.Process();
 	int resCounter = 0;

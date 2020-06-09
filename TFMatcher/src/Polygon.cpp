@@ -13,6 +13,14 @@ Polygon::Polygon(const vector<Vector2>& _vertices)
 	}
 }
 
+Polygon::Polygon(const Polygon& _other)
+{
+	for (int vertex(0); vertex < _other.GetVertexCount(); vertex++)
+	{
+		AddVertex(_other.vertices[vertex]);
+	}
+}
+
 
 void Polygon::AddVertex(Vector2 _vertex)
 {

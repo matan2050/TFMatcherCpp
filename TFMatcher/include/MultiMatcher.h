@@ -8,7 +8,6 @@
 class MultiMatcher
 {
     private:
-    std::vector<Matcher> multiMatcherCollection;
     Polygon referencePolygon;
     int polygonCounter = 0;
 
@@ -17,10 +16,18 @@ class MultiMatcher
     void SetReference(const Polygon& reference);
     void AddPolygon(const Polygon& polygon);
     void PopPolygon();
-    std::vector<double> Process() const;
-    
+    std::vector<double> virtual Process() const;
     
     int GetPolygonCount() const {return polygonCounter;}
+
+    protected:
+    std::vector<Matcher> multiMatcherCollection;
+};
+
+class MultiMatcherParallel : public MultiMatcher
+{
+    public:
+    std::vector<double> virtual Process() const;
 };
 
 #endif
