@@ -41,25 +41,6 @@ std::vector<double> MultiMatcherParallel::Process() const
 
     if (0 != multiMatcherCollection.size())
     {
-        int counter = 0;
-
-        int n_threads = omp_get_max_threads();
-        int divisor = multiMatcherCollection.size() / n_threads;
-        int modulo = multiMatcherCollection.size() % n_threads;
-        int deductable_modulo = modulo;
-
-        std::unique_ptr<int[]> workers_job_number = std::make_unique<int[]>(n_threads);
-        for (int i(0); i < n_threads; i++)
-        {
-            workers_job_number[i] = divisor;
-
-            if (deductable_modulo > 0)
-            {
-                workers_job_number[i] += 1;
-                deductable_modulo -= 1;
-            }
-        }
-
         #pragma omp parallel for
         for (int i(0); i < multiMatcherCollection.size(); i++)
         {
