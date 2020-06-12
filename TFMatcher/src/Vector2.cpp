@@ -10,6 +10,25 @@ Vector2::Vector2(double _element1, double _element2) : element1(_element1), elem
 double Vector2::GetElement1() const { return element1; }
 double Vector2::GetElement2() const { return element2; }
 
+// operator overloads
+void Vector2::operator=(const Vector2& _otherVec)
+{
+	element1 = _otherVec.element1;
+	element2 = _otherVec.element2;
+}
+
+void Vector2::operator+(const Vector2& _otherVec)
+{
+	element1 += _otherVec.element1;
+	element2 += _otherVec.element2;
+}
+
+void Vector2::operator+=(const Vector2& _otherVec)
+{
+	*this + _otherVec;
+}
+
+// vector algebra functions
 double Vector2::Dot(Vector2 _otherVec) const
 {
 	return element1*_otherVec.element1 + element2*_otherVec.element2;
@@ -35,10 +54,18 @@ string Vector2::ToString() const
 	return ss.str();
 }
 
-TEST_CASE("test vector magnitude")
+// unit tests
+TEST_CASE("test vector functions")
 {
 	Vector2 vec1(1.0f, 1.0f);
 	Vector2 vec2(2.0f, 3.0f);
 
 	CHECK(vec1.Dot(vec2) - 5.0f < EPSILON);
+
+	Vector2 vec3 = vec1;
+
+	CHECK((vec3.GetElement1() - vec1.GetElement1() < EPSILON));
+	CHECK((vec3.GetElement2() - vec1.GetElement2() < EPSILON));
+	
+	vec3 += vec1;
 }

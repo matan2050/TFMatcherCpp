@@ -18,7 +18,9 @@ public:
 	Vector2();
 	Vector2(double, double);
 
-	//Vector2 operator=(const Vector2&);
+	void operator=(const Vector2&);
+	void operator+(const Vector2&);
+	void operator+=(const Vector2&);
 
 	double GetElement1() const;
 	double GetElement2() const;
