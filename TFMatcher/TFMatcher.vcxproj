@@ -113,9 +113,9 @@
     <ClCompile Include="src\AlignedTF.cpp" />
     <ClCompile Include="src\Matcher.cpp" />
     <ClCompile Include="src\Polygon.cpp" />
+    <ClCompile Include="src\UnitTestEntry.cpp" />
     <ClCompile Include="src\StringUtils.cpp" />
     <ClCompile Include="src\TurningFunction.cpp" />
-    <ClCompile Include="src\UnitTest.cpp" />
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>

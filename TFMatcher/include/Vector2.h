@@ -1,13 +1,14 @@
 #ifndef _VECTOR2_H_
 #define _VECTOR2_H_
 
+#include "SharedDefinitions.h"
 #include <math.h>
 #include <string>
 #include <sstream>
 
 using namespace std;
 
-class Vector2 
+struct Vector2 
 {
 private:
 	double element1;

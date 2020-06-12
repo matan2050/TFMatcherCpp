@@ -30,10 +30,10 @@
     <ClCompile Include="src\TurningFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UnitTest.cpp">
+    <ClCompile Include="src\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vector2.cpp">
+    <ClCompile Include="src\UnitTestEntry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include "../include/Polygon.h"
+#include "../third_party/doctest/doctest.h"
 
 // ctor & dtor
 Polygon::Polygon() {}

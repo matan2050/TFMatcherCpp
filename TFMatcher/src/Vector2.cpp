@@ -1,5 +1,7 @@
 #include "../include/Vector2.h"
 
+#include "../third_party/doctest/doctest.h"
+
 // constructors
 Vector2::Vector2() : element1(0), element2(0) {}
 Vector2::Vector2(double _element1, double _element2) : element1(_element1), element2(_element2) {}
@@ -31,4 +33,12 @@ string Vector2::ToString() const
 	ostringstream ss;
 	ss << element1 << ", " << element2;
 	return ss.str();
+}
+
+TEST_CASE("test vector magnitude")
+{
+	Vector2 vec1(1.0f, 1.0f);
+	Vector2 vec2(2.0f, 3.0f);
+
+	CHECK(vec1.Dot(vec2) - 5.0f < EPSILON);
 }
