@@ -26,7 +26,7 @@ public:
 	std::vector<double> CalculateNormalizedRange(const Polygon&);
 	std::vector<double> CalculateImage(const Polygon&);
 
-	double ValueAt(float) const;
+	double ValueAt(double) const;
 
 	// GETTERS
 	std::vector<double> GetRange() const;

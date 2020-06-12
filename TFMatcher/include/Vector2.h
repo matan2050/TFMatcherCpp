@@ -24,7 +24,7 @@ public:
 	void operator=(const Vector2&);
 	void operator+(const Vector2&);
 	void operator+=(const Vector2&);
-	bool operator==(const Vector2&);
+	bool operator==(const Vector2&) const;
 	// -----------------------------
 
 	// getters ----------------

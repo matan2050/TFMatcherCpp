@@ -20,7 +20,7 @@ private:
 public:
 	
 	// CONSTRUCTORS
-	Polygon();
+	Polygon() {};
 	Polygon(const vector<Vector2>&);
 	
 	// VERTEX AND EDGE ADDING FUNCTIONS

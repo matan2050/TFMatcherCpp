@@ -84,7 +84,7 @@ vector<double> TurningFunction::GetImage() const
 	return image;
 }
 
-double TurningFunction::ValueAt(float _x) const
+double TurningFunction::ValueAt(double _x) const
 {
 	if ((_x < RANGE_MIN) || (_x > RANGE_MAX))
 	{

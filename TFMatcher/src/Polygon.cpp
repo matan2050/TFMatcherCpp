@@ -1,9 +1,7 @@
 #include "../include/Polygon.h"
 #include "../third_party/doctest/doctest.h"
 
-// ctor & dtor
-Polygon::Polygon() {}
-
+// ctor
 Polygon::Polygon(const vector<Vector2>& _vertices)
 {
 	vertices = _vertices;

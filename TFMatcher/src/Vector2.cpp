@@ -1,6 +1,4 @@
-#include <math.h>
 #include "../include/Vector2.h"
-
 #include "../third_party/doctest/doctest.h"
 
 // constructors
@@ -29,7 +27,7 @@ void Vector2::operator+=(const Vector2& _otherVec)
 	*this + _otherVec;
 }
 
-bool Vector2::operator==(const Vector2& _otherVec)
+bool Vector2::operator==(const Vector2& _otherVec) const
 {
 	return ((abs(element1 - _otherVec.element1) < EPSILON) &&
 		(abs(element2 - _otherVec.element2) < EPSILON));
