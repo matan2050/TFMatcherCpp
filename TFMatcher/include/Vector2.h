@@ -15,21 +15,32 @@ private:
 	double element2;
 
 public:
+	// constructors --------
 	Vector2();
 	Vector2(double, double);
+	// ---------------------
 
+	// operator overloads ----------
 	void operator=(const Vector2&);
 	void operator+(const Vector2&);
 	void operator+=(const Vector2&);
+	bool operator==(const Vector2&);
+	// -----------------------------
 
+	// getters ----------------
 	double GetElement1() const;
 	double GetElement2() const;
+	// ------------------------
 
+	// vector algebra functions ---------
 	double Dot(Vector2) const;
 	double CrossDirection(Vector2) const;
-
 	double Magnitude() const;
+	// ----------------------------------
+
+	// auxiliary methods ---
 	string ToString() const;
+	// ---------------------
 };
 
 #endif

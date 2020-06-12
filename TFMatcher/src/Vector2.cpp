@@ -1,3 +1,4 @@
+#include <math.h>
 #include "../include/Vector2.h"
 
 #include "../third_party/doctest/doctest.h"
@@ -26,6 +27,12 @@ void Vector2::operator+(const Vector2& _otherVec)
 void Vector2::operator+=(const Vector2& _otherVec)
 {
 	*this + _otherVec;
+}
+
+bool Vector2::operator==(const Vector2& _otherVec)
+{
+	return ((abs(element1 - _otherVec.element1) < EPSILON) &&
+		(abs(element2 - _otherVec.element2) < EPSILON));
 }
 
 // vector algebra functions
@@ -64,8 +71,8 @@ TEST_CASE("test vector functions")
 
 	Vector2 vec3 = vec1;
 
-	CHECK((vec3.GetElement1() - vec1.GetElement1() < EPSILON));
-	CHECK((vec3.GetElement2() - vec1.GetElement2() < EPSILON));
+	CHECK((abs(vec3.GetElement1() - vec1.GetElement1()) < EPSILON));
+	CHECK((abs(vec3.GetElement2() - vec1.GetElement2()) < EPSILON));
 	
 	vec3 += vec1;
 }
