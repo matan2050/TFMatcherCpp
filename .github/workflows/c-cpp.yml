@@ -13,6 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
     - name: CMake
       run: CMake CMakeLists.txt
