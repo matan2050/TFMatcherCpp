@@ -1,8 +1,6 @@
 # compiled source #
 ###################
 *.o
-*.obj
-*.lib
 *.d
 
 # logs #
