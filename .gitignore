@@ -19,3 +19,5 @@
 *.lastbuildstate
 *.ipch
 *.idb
+*.pdb
+/x64
