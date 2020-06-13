@@ -15,7 +15,7 @@ private:
 	vector<Vector2> edges;
 	int edgeCount = 0;
 	int vertexCount = 0;
-	double perimeter;
+	double perimeter = 0;
 
 public:
 	

@@ -1,5 +1,4 @@
 #include "../include/Polygon.h"
-#include "../third_party/doctest/doctest.h"
 
 // ctor
 Polygon::Polygon(const vector<Vector2>& _vertices)
