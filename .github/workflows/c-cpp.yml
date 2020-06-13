@@ -14,6 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir TFMatcher/obj
     - name: CMake
       run: CMake CMakeLists.txt
