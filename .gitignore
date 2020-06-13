@@ -14,10 +14,21 @@
 ######################
 *.db
 
+# cmake intermediate files #
+############################
+/CMakeFiles
+CMakeCache.txt
+*.cmake
+
 # visual studio files #
 #######################
 *.lastbuildstate
+*.vcxproj
+*.vcxproj.filters
+*.sln
 *.ipch
 *.idb
 *.pdb
-/x64
+/.vs
+/Debug
+/Release
