@@ -3,10 +3,10 @@
 
 // constructors
 Vector2::Vector2() : element1(0), element2(0) {}
-Vector2::Vector2(double _element1, double _element2) : 
+Vector2::Vector2(double _element1, double _element2) :
     element1(_element1), element2(_element2) {}
 
-Vector2::Vector2(const Vector2& _other) : 
+Vector2::Vector2(const Vector2& _other) :
     element1(_other.element1), element2(_other.element2) {}
 
 // getters
@@ -16,19 +16,30 @@ double Vector2::GetElement2() const { return element2; }
 // operator overloads
 void Vector2::operator=(const Vector2& _other)
 {
-	element1 = _other.element1;
-	element2 = _other.element2;
+    element1 = _other.element1;
+    element2 = _other.element2;
 }
 
 void Vector2::operator+(const Vector2& _other)
 {
-	element1 += _other.element1;
-	element2 += _other.element2;
+    element1 += _other.element1;
+    element2 += _other.element2;
 }
 
 void Vector2::operator+=(const Vector2& _other)
 {
-	*this + _other;
+    *this + _other;
+}
+
+void Vector2::operator-(const Vector2& _other)
+{
+    element1 -= _other.element1;
+    element2 -= _other.element2;
+}
+
+void Vector2::operator-=(const Vector2& _other)
+{
+    *this - _other;
 }
 
 bool Vector2::operator==(const Vector2& _other) const

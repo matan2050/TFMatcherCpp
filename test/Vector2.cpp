@@ -16,15 +16,20 @@ TEST_CASE("test vector functions")
     Vector2 vec1Clone2 = vec1;
     CHECK(vec1 == vec1Clone2);
     CHECK(vec1 != vec2);
-
+    CHECK((abs(vec1.GetElement1() - vec1Clone.GetElement1()) < EPSILON));
+    CHECK((abs(vec1.GetElement2() - vec1Clone.GetElement2()) < EPSILON));
 
     SUBCASE("test dot product");
 	CHECK(abs(vec1.Dot(vec2) - 5.0f) < EPSILON);
     CHECK(abs(vec1.Dot(zeroVector)) < EPSILON);
     CHECK(abs(vec1.Dot(negativeVector) - (-11.0f)) < EPSILON);
 
-	CHECK((abs(vec3.GetElement1() - vec1.GetElement1()) < EPSILON));
-	CHECK((abs(vec3.GetElement2() - vec1.GetElement2()) < EPSILON));
 
-	vec3 += vec1;
+    SUBCASE("test add and subtract operators");
+    Vector2 vec2Clone = vec2;
+    vec1Clone + vec2;
+    CHECK(vec1Clone.GetElement1() == 3.0f);
+    CHECK(vec1Clone.GetElement2() == 4.0f);
+    vec1Clone - vec2;
+    CHECK(vec1Clone == vec1);
 }
