@@ -12,7 +12,13 @@ ADD_LIBRARY( TFMatcher STATIC
 	src/Polygon.cpp 
 	src/StringUtils.cpp 
 	src/TurningFunction.cpp 
-	src/Vector2.cpp )
+	src/Vector2.cpp
+	include/AlignedTF.h
+	include/Matcher.h
+	include/Polygon.h
+	include/StringUtils.h
+	include/TurningFunction.h
+	include/Vector2.h )
 	
 # unit test project
 ADD_EXECUTABLE( UnitTest
