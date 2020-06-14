@@ -18,6 +18,7 @@ public:
 	// constructors --------
 	Vector2();
 	Vector2(double, double);
+    Vector2(const Vector2&);
 	// ---------------------
 
 	// operator overloads ----------
@@ -25,6 +26,7 @@ public:
 	void operator+(const Vector2&);
 	void operator+=(const Vector2&);
 	bool operator==(const Vector2&) const;
+    bool operator!=(const Vector2&) const;
 	// -----------------------------
 
 	// getters ----------------
