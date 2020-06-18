@@ -70,15 +70,19 @@ double Vector2::CrossDirection(Vector2 _vec2) const
 {
 	double zCross = 
         GetElement1() * _vec2.GetElement2() -
-        GetElement2() *_vec2.GetElement1();
+        GetElement2() * _vec2.GetElement1();
 
 	if (zCross > 0) 
     { 
         return 1.0; 
     }
-	else 
+	else if (zCross < 0)
     { 
         return -1.0; 
+    }
+    else
+    {
+        return 0.0;
     }
 }
 

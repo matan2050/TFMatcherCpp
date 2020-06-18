@@ -10,14 +10,22 @@ TEST_CASE("test vector functions")
 	Vector2 vec2(2.0f, 3.0f);
     
 
-    SUBCASE("test equality operator, copy constructor and assignment operator");
+    SUBCASE("test equality operator, copy ctor and assignment operator");
     Vector2 vec1Clone(vec1);
     CHECK(vec1 == vec1Clone);
     Vector2 vec1Clone2 = vec1;
     CHECK(vec1 == vec1Clone2);
     CHECK(vec1 != vec2);
-    CHECK((abs(vec1.GetElement1() - vec1Clone.GetElement1()) < EPSILON));
-    CHECK((abs(vec1.GetElement2() - vec1Clone.GetElement2()) < EPSILON));
+
+    CHECK(
+        abs(vec1.GetElement1() - vec1Clone.GetElement1()) < 
+        EPSILON
+    );
+
+    CHECK(
+        abs(vec1.GetElement2() - vec1Clone.GetElement2()) < 
+        EPSILON
+    );
 
     SUBCASE("test dot product");
 	CHECK(abs(vec1.Dot(vec2) - 5.0f) < EPSILON);
@@ -32,4 +40,10 @@ TEST_CASE("test vector functions")
     CHECK(vec1Clone.GetElement2() == 4.0f);
     vec1Clone - vec2;
     CHECK(vec1Clone == vec1);
+
+
+    SUBCASE("test cross direction");
+    CHECK(vec1.CrossDirection(vec2) > 0);
+    CHECK(vec1.CrossDirection(negativeVector) < 0);
+    CHECK(vec1.CrossDirection(zeroVector) == 0);
 }

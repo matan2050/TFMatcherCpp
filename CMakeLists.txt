@@ -23,6 +23,7 @@ ADD_LIBRARY( TFMatcher STATIC
 # unit test project
 ADD_EXECUTABLE( UnitTest
 	test/UnitTestEntry.cpp
-	test/Vector2.cpp )
+	test/Vector2.cpp
+    test/Polygon.cpp )
 	
 TARGET_LINK_LIBRARIES (UnitTest TFMatcher)
